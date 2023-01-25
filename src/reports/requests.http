@@ -1,0 +1,33 @@
+###Get all report  
+GET http://localhost:5000/reports
+
+###Create resume 
+POST http://localhost:5000/reports
+content-type: application/json
+
+{
+  "name": "JholMomo3",
+  "address": "Satdobato",
+  "contact": 989843423,
+  "cvFile":"/abcd.jpg"
+ 
+}
+
+###Get only bookmarked 
+GET http://localhost:5000/reports/bookmark
+
+###Get only bookmarked 
+GET http://localhost:5000/reports/record/9
+
+###Update 
+PATCH http://localhost:5000/reports/2
+content-type: application/json
+
+{
+  "bookmark": true
+}
+
+
+
+### Delete a user given id
+DELETE http://localhost:5000/reports/11
